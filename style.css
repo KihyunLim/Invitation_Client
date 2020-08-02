@@ -1,0 +1,607 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-grey: #999999;
+  --color-grey-light: #f8f9fa;
+  --color-grey-rgb: rgba(0, 0, 0, 0.15);
+  --color-green-light: #dcf4e6;
+  --color-pink: #f67e7d;
+
+  /* Font size */
+  --font-large: 4rem;
+  --font-medium: 1.5rem;
+  --font-regular: 1rem;
+  --font-small: 0.7rem;
+  --font-micro: 0.5rem;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+  --size-large: 4rem;
+  --size-medium: 1.5rem;
+  --size-regular: 1rem;
+  --size-small: 0.7rem;
+  --size-micro: 0.5rem;
+
+  /* Annimation */
+  --animation-duration: 300ms;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+/* html {
+  font-size: 16px;
+} */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-pink);
+  margin: 0 0 16px 0;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 0 0 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  margin: 0 0 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  color: var(--color-grey);
+  margin: 0 0 4px 0;
+}
+
+section {
+  text-align: center;
+  margin: auto;
+  padding: 4.7rem 0;
+}
+
+/* Navbar */
+#navbar {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  padding: 1rem;
+  position: fixed;
+  z-index: 3;
+  border: 1px solid black;
+}
+
+.navbar__project a {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar__side {
+  position: relative;
+  display: flex;
+}
+
+.side__menu {
+  margin: 0;
+  display: flex;
+}
+
+.menu__item {
+  padding: var(--size-micro) var(--size-small);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
+  font-weight: var(--weight-semi-bold);
+}
+.menu__item:hover {
+  border-color: var(--color-white);
+}
+
+.side__toggle-btn {
+  position: absolute;
+  font-size: var(--font-regular);
+  top: 0.8rem;
+  right: 0;
+  color: var(--color-white);
+  display: none;
+}
+
+/* Home */
+#home {
+  background-color: #ff9393;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home__decoration {
+  color: var(--color-white);
+  font-size: var(--font-large);
+}
+
+.home__guide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__guide .guide__bar {
+  height: 2px;
+  width: 100px;
+  background-color: var(--color-white);
+}
+
+.home__guide .guide__text {
+  color: var(--color-white);
+  margin: 0 1rem;
+}
+
+.home__title {
+  color: var(--color-white);
+}
+
+.home__d_day {
+  display: flex;
+  justify-content: center;
+}
+
+.home__d_day p {
+  color: var(--color-white);
+  margin: 0 16px;
+}
+.home__d_day p.item__num {
+  font-size: 2rem;
+  font-weight: var(--weight-semi-bold);
+}
+
+/* Main */
+#main {
+  background-color: var(--color-white);
+  height: 900px;
+  padding: 0 3rem;
+}
+
+.main__container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__container:before {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  bottom: 40px;
+  left: 20px;
+  content: '';
+  border: 1px solid var(--color-grey-rgb);
+  transform: rotate(-0.5deg);
+  z-index: 2;
+}
+.main__container:after {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  bottom: 40px;
+  left: 20px;
+  content: '';
+  border: 1px solid var(--color-grey-rgb);
+  transform: rotate(0.5deg);
+  z-index: 1;
+}
+
+.container__main_image {
+  height: 900px;
+  max-height: 100%;
+  flex-basis: 45%;
+  background-image: url(imgs/about.jpg);
+  background-position: center;
+  background-size: cover;
+  margin: 0 8px;
+  z-index: 1;
+}
+
+.main__container .container__info {
+  flex-basis: 45%;
+  margin: 0 8px;
+  z-index: 1;
+}
+
+#main .info__guide {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-regular);
+}
+
+#main .info__title {
+  margin: 50px 0 30px;
+}
+
+#main .info__decoration {
+  font-size: var(--font-large);
+  font-weight: var(--weight-regular);
+  color: #cccccc9a;
+}
+
+#main .info__date {
+  margin-bottom: 10px;
+}
+#main .info__date span {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-grey);
+}
+
+#main .info__time {
+  margin-bottom: 30px;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-grey);
+}
+
+#main .info__place {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-regular);
+  color: var(--color-grey);
+}
+
+/* Bride & Groom */
+#brideGroom {
+  background-color: var(--color-white);
+  position: relative;
+  padding: 15rem 0;
+}
+
+.brideGroom__topBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 300px;
+  background-image: url(imgs/top-bg.jpg);
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.brideGroom__bottomBackground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 300px;
+  background-image: url(imgs/bottom-bg.jpg);
+  background-position: top center;
+  background-size: cover;
+}
+
+.brideGroom__container {
+  position: relative;
+}
+
+.brideGroom__container .container__info {
+  display: flex;
+  justify-content: center;
+  min-height: 450px;
+}
+
+#brideGroom .info__item {
+  position: relative;
+  z-index: 0;
+  flex-basis: 35%;
+  margin: 0 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 1.5rem;
+}
+#brideGroom .info__item:before {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  bottom: -40px;
+  left: 0;
+  content: '';
+  border: 1px solid var(--color-grey-rgb);
+  z-index: -1;
+  transform: rotate(-1deg);
+}
+#brideGroom .info__item:after {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  bottom: -40px;
+  left: 0;
+  content: '';
+  border: 1px solid var(--color-grey-rgb);
+  z-index: -1;
+  transform: rotate(1deg);
+}
+
+#brideGroom .info__item .item__image {
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+#brideGroom .info__item .item__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+#brideGroom .info__item .item__content {
+  position: relative;
+}
+
+/* Love Story */
+#loveStory {
+  background-color: var(--color-white);
+}
+
+.loveStory__story {
+  position: relative;
+  list-style: none;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.loveStory__story:before {
+  top: 30px;
+  bottom: 0;
+  position: absolute;
+  content: '';
+  border-right: 1px solid var(--color-pink);
+  left: 50%;
+}
+
+.loveStory__story > li:before,
+.loveStory__story > li:after {
+  content: '';
+  display: table;
+}
+.loveStory__story > li:after {
+  clear: both;
+}
+
+.story__item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.story__item .item__image {
+  width: 100px;
+  height: 100px;
+  border: 5px solid var(--color-pink);
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -50px;
+  z-index: 1;
+}
+
+.story__item .item__info {
+  width: 43%;
+  position: relative;
+  z-index: 0;
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  text-align: right;
+}
+.story__item:nth-child(even) .item__info {
+  float: right;
+  text-align: left;
+}
+.story__item .item__info:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  border: 1px solid var(--color-grey-rgb);
+  z-index: -1;
+  transform: rotate(-1deg);
+}
+.story__item .item__info:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  border: 1px solid var(--color-grey-rgb);
+  z-index: -1;
+  transform: rotate(1deg);
+}
+
+#loveStory .info__date {
+  color: var(--color-pink);
+  font-size: var(--font-micro);
+}
+
+#loveStory .info__title {
+  font-size: var(--font-medium);
+  margin: 1rem 0;
+}
+
+/* When & Where */
+#whenWhere {
+  background-color: var(--color-grey-light);
+}
+
+.whenWhere__ceremony {
+  display: flex;
+  justify-content: center;
+}
+
+.ceremony__item {
+  margin: 20px;
+  padding: 1.5rem;
+  flex-basis: 35%;
+  min-height: 600px;
+  background-size: cover;
+}
+
+.ceremony__item .wrap__item {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-white);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#whenWhere .item__decoration {
+  font-size: var(--font-large);
+  color: var(--color-pink);
+}
+
+#whenWhere .item__title {
+  margin: 1rem;
+}
+
+#whenWhere .item__date,
+#whenWhere .item__time,
+#whenWhere .item__place {
+  font-weight: var(--weight-semi-bold);
+}
+
+#whenWhere .item__time,
+#whenWhere .item__place {
+  margin-bottom: 1rem;
+}
+
+#whenWhere .item__map {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 0.5rem;
+}
+
+#whenWhere .item__move_web {
+  border: 1px solid var(--color-pink);
+  border-radius: var(--size-border-radius);
+  color: var(--color-pink);
+  font-weight: var(--weight-semi-bold);
+  width: 90px;
+  margin: auto;
+}
+
+/* Gallery */
+#gallery {
+  background-color: var(--color-white);
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.gallery__image {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image__item {
+  position: relative;
+  max-width: 20%;
+  height: 300px;
+  padding: 4px;
+}
+
+#gallery .item__image {
+  width: 100%;
+  height: 100%;
+}
+
+#gallery .item__imageIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-pink);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+}
+#gallery .image__item:hover .item__imageIcon {
+  opacity: 0.8;
+}
+
+.imageIcon__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  font-size: 30px;
+  color: var(--color-pink);
+}
+
+/* Sweet Message List */
+#sweetMessageList {
+  background-color: var(--color-grey-light);
+}
+
+/* Sweet Message Write */
+#sweetMessageWrite {
+  background-color: var(--color-green-light);
+}
