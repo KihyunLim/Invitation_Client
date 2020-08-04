@@ -558,7 +558,6 @@ section {
 .image__item {
   position: relative;
   max-width: 20%;
-  height: 300px;
   padding: 4px;
 }
 
@@ -599,6 +598,69 @@ section {
 /* Sweet Message List */
 #sweetMessageList {
   background-color: var(--color-grey-light);
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.sweetMessageList__message {
+  display: flex;
+  overflow: auto;
+  cursor: grab; /* js로 이벤트 잡아줘야하나보네 */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.sweetMessageList__message::-webkit-scrollbar {
+  display: none;
+}
+
+.message__item {
+  min-width: 300px;
+  padding: 0.6rem 1rem;
+  margin: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-white);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#sweetMessageList .item__content {
+  margin-bottom: 10px;
+  color: var(--color-grey);
+}
+
+#sweetMessageList .item__info {
+  position: relative;
+  display: flex;
+}
+
+#sweetMessageList .item__name {
+  display: inline;
+  font-size: 1.1rem;
+  font-weight: var(--weight-semi-bold);
+  border-top: 1px solid var(--color-pink);
+  padding-top: 0.2rem;
+  margin: 0;
+}
+
+#sweetMessageList .item__wrap_delete {
+  position: relative;
+  width: 30px;
+}
+
+#sweetMessageList .wrap_delete__delete {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.8rem;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
+  margin-left: 4px;
+  padding: 0;
+  height: 1.25rem;
 }
 
 /* Sweet Message Write */
