@@ -667,3 +667,48 @@ section {
 #sweetMessageWrite {
   background-color: var(--color-green-light);
 }
+
+.sweetMessageWrite__form {
+  width: 60%;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-white);
+  margin: auto;
+  padding: 3rem;
+}
+
+.form_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_wrap input,
+.form_wrap textarea {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  border: 1px solid var(--color-grey-rgb);
+  border-radius: var(--size-border-radius);
+}
+
+.form__content {
+  font-size: 15rem;
+  margin: 10px 0;
+  width: 100%;
+  height: 200px;
+  resize: none;
+  font-weight: 550;
+}
+.form__content::placeholder {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+
+.form__writeMessage {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: var(--color-pink);
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: var(--color-white);
+  width: 100px;
+}
