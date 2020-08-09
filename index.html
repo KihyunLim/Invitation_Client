@@ -26,13 +26,15 @@
       </div>
       <div class="navbar__side">
         <ul class="side__menu">
-          <li class="menu__item">Home</li>
-          <li class="menu__item">Main</li>
-          <li class="menu__item">Bride & Groom</li>
-          <li class="menu__item">Love Story</li>
-          <li class="menu__item">When & Where</li>
-          <li class="menu__item">Gallery</li>
-          <li class="menu__item">Sweet Message</li>
+          <li class="menu__item" data-link="#home">Home</li>
+          <li class="menu__item" data-link="#main">Main</li>
+          <li class="menu__item" data-link="#brideGroom">Bride & Groom</li>
+          <li class="menu__item" data-link="#loveStory">Love Story</li>
+          <li class="menu__item" data-link="#whenWhere">When & Where</li>
+          <li class="menu__item" data-link="#gallery">Gallery</li>
+          <li class="menu__item" data-link="#sweetMessageList">
+            Sweet Message
+          </li>
         </ul>
         <button class="side__toggle-btn">
           <i class="fas fa-bars"></i>
@@ -429,7 +431,6 @@
             class="form__password"
             placeholder="비밀번호"
           />
-          <!-- style="resize: none;" -->
           <textarea
             placeholder="내용을 입력해주세요."
             class="form__content"
@@ -438,5 +439,17 @@
         </div>
       </div>
     </section>
+
+    <!-- modal -->
+    <div id="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__gallery">
+        <div class="gallery__arrow"><i class="fas fa-chevron-left"></i></div>
+        <div class="gallery__image">
+          <img src="./imgs/gallery-1.jpg" alt="gallery-1" />
+        </div>
+        <div class="gallery__arrow"><i class="fas fa-chevron-right"></i></div>
+      </div>
+    </div>
   </body>
 </html>

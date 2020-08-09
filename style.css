@@ -111,9 +111,29 @@ section {
   align-items: center;
   color: var(--color-white);
   padding: 1rem;
-  position: fixed;
+  position: absolute;
   z-index: 3;
-  border: 1px solid black;
+  border: 1px solid transparent;
+}
+
+#navbar.scrolled {
+  margin-top: -130px;
+  position: fixed;
+}
+
+#navbar.navbar--awake {
+  margin-top: 0;
+  position: fixed;
+  background-color: var(--color-white);
+  border: 1px solid transparent;
+  transition: var(--animation-duration) all ease-out;
+}
+#navbar.navbar--awake a,
+#navbar.navbar--awake li {
+  color: var(--color-black);
+}
+#navbar.navbar--sleep {
+  transition: var(--animation-duration) all ease-out;
 }
 
 .navbar__project a {
@@ -140,6 +160,9 @@ section {
 }
 .menu__item:hover {
   border-color: var(--color-white);
+}
+#navbar.navbar--awake .menu__item:hover {
+  border-color: var(--color-pink);
 }
 
 .side__toggle-btn {
@@ -549,13 +572,13 @@ section {
   padding-right: 3rem;
 }
 
-.gallery__image {
+#gallery .gallery__image {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.image__item {
+#gallery .image__item {
   position: relative;
   max-width: 20%;
   padding: 4px;
@@ -580,7 +603,7 @@ section {
   opacity: 0.8;
 }
 
-.imageIcon__container {
+#gallery .imageIcon__container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -711,4 +734,53 @@ section {
   margin: 10px 0;
   color: var(--color-white);
   width: 100px;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-grey);
+  opacity: 85%;
+}
+
+#modal .modal__gallery {
+  background-color: transparent;
+  position: absolute;
+  max-width: 40%;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#modal .modal__gallery .gallery__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0px 8px;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
+  overflow: hidden;
+}
+#modal .modal__gallery .gallery__image img {
+  width: 100%;
+  vertical-align: middle;
+}
+#modal .modal__gallery .gallery__arrow {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-pink);
 }
