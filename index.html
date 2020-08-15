@@ -15,8 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="invitation.js" defer></script>
+    <link rel="stylesheet" href="style_desktop.css" />
+    <link rel="stylesheet" href="style_mobile.css" />
+    <script src="style.js" defer></script>
+    <!-- <script src="invitation.js" defer></script> -->
   </head>
   <body>
     <!-- Navbar -->
@@ -24,22 +26,20 @@
       <div class="navbar__project">
         <a href="#">Invitation</a>
       </div>
-      <div class="navbar__side">
-        <ul class="side__menu">
-          <li class="menu__item" data-link="#home">Home</li>
-          <li class="menu__item" data-link="#main">Main</li>
-          <li class="menu__item" data-link="#brideGroom">Bride & Groom</li>
-          <li class="menu__item" data-link="#loveStory">Love Story</li>
-          <li class="menu__item" data-link="#whenWhere">When & Where</li>
-          <li class="menu__item" data-link="#gallery">Gallery</li>
-          <li class="menu__item" data-link="#sweetMessageList">
-            Sweet Message
-          </li>
-        </ul>
-        <button class="side__toggle-btn">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
+      <ul class="side__menu">
+        <li class="menu__item" data-link="#home">Home</li>
+        <li class="menu__item" data-link="#main">Main</li>
+        <li class="menu__item" data-link="#brideGroom">Bride & Groom</li>
+        <li class="menu__item" data-link="#loveStory">Love Story</li>
+        <li class="menu__item" data-link="#whenWhere">When & Where</li>
+        <li class="menu__item" data-link="#gallery">Gallery</li>
+        <li class="menu__item" data-link="#sweetMessageList">
+          Sweet Message
+        </li>
+      </ul>
+      <button class="side__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <!-- Home -->
@@ -386,7 +386,7 @@
             축축하축하축하축하축하축하축하축하축하축하축하축하축하축하축하
           </div>
           <div class="item__info">
-            <h3 class="info__name">친구4</h3>
+            <h3 class="item__name">친구4</h3>
             <div class="item__wrap_delete">
               <button class="wrap_delete__delete">삭제</button>
             </div>
@@ -444,11 +444,15 @@
     <div id="modal">
       <div class="modal__overlay"></div>
       <div class="modal__gallery">
-        <div class="gallery__arrow"><i class="fas fa-chevron-left"></i></div>
+        <div class="gallery__arrow prev">
+          <i class="fas fa-chevron-left"></i>
+        </div>
         <div class="gallery__image">
           <img src="./imgs/gallery-1.jpg" alt="gallery-1" />
         </div>
-        <div class="gallery__arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="gallery__arrow next">
+          <i class="fas fa-chevron-right"></i>
+        </div>
       </div>
     </div>
   </body>

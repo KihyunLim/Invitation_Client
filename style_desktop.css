@@ -43,6 +43,7 @@
 } */
 
 body {
+  width: 100vw;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   cursor: default;
@@ -139,11 +140,6 @@ section {
 .navbar__project a {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
-}
-
-.navbar__side {
-  position: relative;
-  display: flex;
 }
 
 .side__menu {
@@ -319,6 +315,7 @@ section {
   background-color: var(--color-white);
   position: relative;
   padding: 15rem 0;
+  width: 100%;
 }
 
 .brideGroom__topBackground {
@@ -574,14 +571,13 @@ section {
 
 #gallery .gallery__image {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px 5px;
 }
 
 #gallery .image__item {
   position: relative;
-  max-width: 20%;
-  padding: 4px;
 }
 
 #gallery .item__image {
@@ -759,7 +755,7 @@ section {
 #modal .modal__gallery {
   background-color: transparent;
   position: absolute;
-  max-width: 40%;
+  width: 60%;
   display: flex;
   align-items: center;
   top: 50%;

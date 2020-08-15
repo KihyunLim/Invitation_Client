@@ -1,0 +1,191 @@
+@media screen and (max-width: 768px) {
+  :root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-grey: #999999;
+    --color-grey-light: #f8f9fa;
+    --color-grey-rgb: rgba(0, 0, 0, 0.15);
+    --color-green-light: #dcf4e6;
+    --color-pink: #f67e7d;
+
+    /* Font size */
+    --font-large: 2rem;
+    --font-medium: 1.5rem;
+    --font-regular: 1rem;
+    --font-small: 0.7rem;
+    --font-micro: 0.5rem;
+
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+
+    /* Size */
+    --size-border-radius: 4px;
+    --size-large: 4rem;
+    --size-medium: 1.5rem;
+    --size-regular: 1rem;
+    --size-small: 0.7rem;
+    --size-micro: 0.5rem;
+
+    /* Annimation */
+    --animation-duration: 300ms;
+  }
+
+  /* Navbar */
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #d88383;
+  }
+
+  .side__toggle-btn {
+    display: block;
+    top: 1.5rem;
+    right: 1rem;
+  }
+
+  #navbar.navbar--awake .side__toggle-btn {
+    color: var(--color-black);
+  }
+
+  .side__menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .side__menu.open {
+    display: block;
+  }
+
+  /* Home */
+  .home__d_day p {
+    margin: 0 8px;
+  }
+  .home__d_day p.item__num {
+    font-size: 1.5rem;
+  }
+
+  .home__guide .guide__bar {
+    width: 40px;
+  }
+
+  /* Main */
+  #main {
+    height: 900px;
+  }
+
+  .main__container {
+    display: block;
+  }
+
+  .container__main_image {
+    height: 400px;
+    margin: 30px 0 8px;
+  }
+
+  #main .info__title {
+    margin: 25px 0 20px;
+  }
+
+  #main .info__place {
+    font-size: var(--font-regular);
+    margin-bottom: 30px;
+    padding: 0 1.5rem;
+  }
+
+  /* Bride & Groom */
+  .brideGroom__container .container__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #brideGroom .info__item .item__content {
+    margin-bottom: 20px;
+  }
+
+  /* Love Story */
+  .loveStory__story {
+    padding: 0 1rem;
+  }
+  .loveStory__story:before {
+    display: none;
+  }
+
+  .story__item {
+    padding-right: 8px;
+  }
+
+  .story__item .item__image {
+    width: 80px;
+    height: 80px;
+    left: 0;
+    margin-left: 0;
+  }
+
+  .story__item .item__info {
+    width: 100%;
+    padding: 0;
+    padding-right: 0.5rem;
+    float: left;
+    text-align: right;
+  }
+  .story__item:nth-child(even) .item__info {
+    float: left;
+    text-align: right;
+  }
+
+  #loveStory .info__date {
+    margin-top: 8px;
+  }
+
+  #loveStory .info__title {
+    margin: 0.5rem 0;
+  }
+
+  #loveStory .info__content {
+    margin: 20px 4px;
+  }
+
+  /* When & Where */
+  .whenWhere__ceremony {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Gallery */
+  #gallery {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #gallery .gallery__image {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* SweetMessage List */
+  #sweetMessageList {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* SweetMessage Write */
+  #sweetMessageWrite {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sweetMessageWrite__form {
+    margin: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Modal */
+  #modal .modal__gallery {
+    width: 80%;
+  }
+}
