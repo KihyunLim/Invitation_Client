@@ -172,6 +172,10 @@
     padding-right: 0;
   }
 
+  #sweetMessageList .item__wrap_delete {
+    width: 60px;
+  }
+
   /* SweetMessage Write */
   #sweetMessageWrite {
     padding-left: 1rem;
