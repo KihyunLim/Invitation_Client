@@ -755,12 +755,12 @@ section {
 #modal .modal__gallery {
   background-color: transparent;
   position: absolute;
-  width: 60%;
   display: flex;
   align-items: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  justify-content: center;
 }
 #modal .modal__gallery .gallery__image {
   position: relative;
@@ -772,8 +772,10 @@ section {
   overflow: hidden;
 }
 #modal .modal__gallery .gallery__image img {
-  width: 100%;
+  max-width: 100%;
   vertical-align: middle;
+  max-height: 800px;
+  margin: 0;
 }
 #modal .modal__gallery .gallery__arrow {
   font-size: var(--font-large);
